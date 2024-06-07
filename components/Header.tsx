@@ -19,6 +19,7 @@ export default function Header() {
             <motion.li
               key={link.hash} // Add a key prop for list items
               className="h-3/4 flex items-center justify-center"
+              
               initial={{ opacity: 0, y: 20 }}
               animate={{
                 opacity: 1,
