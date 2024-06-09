@@ -11,7 +11,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.175 }}
       >
-          <Heading>About me</Heading>
+          <Heading>about me</Heading>
           <p className="mb-3">
           After graduating with a Computer Science degree,
           I initially worked as a <span className="font-medium">Network Engineer</span> abroad, though my true passion was in software development.
