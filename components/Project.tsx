@@ -45,7 +45,7 @@ export default function Project({title,
         </ul>
       </div>
 
-      <Image src={imageUrl} alt='My projects' quality={95} className='absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 
+      <Image src={imageUrl} alt='My projects' quality={50} className='absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 
       
       group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 
       group-even:group-hover:rotate-2
@@ -54,4 +54,4 @@ export default function Project({title,
     </section>  
     </motion.div>
   );
-}
+};

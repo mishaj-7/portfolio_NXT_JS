@@ -1,17 +1,35 @@
 "use client"
 
 
-import Heading from '@/components/SectionsHeading'
-import {motion} from 'framer-motion'
+import SectionHeading from '@/components/SectionsHeading';
+import { useSectionInview } from '@/lib/hook';
+import { motion } from 'framer-motion';
 
 export default function About() {
+  const {ref} = useSectionInview('About');
+  
+  // const { ref, inView } = useInView({
+  //   threshold:0.75,
+  // });
+  // //console.log(inView)
+  // const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  
+  // useEffect(() => {
+  //   if (inView && Date.now() - timeOfLastClick > 1000) {
+  //     setActiveSection('About')
+  //   }
+  // }, [inView, setActiveSection, timeOfLastClick]);
+  
   return (
-      <motion.section className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40'
+      <motion.section ref={ref} className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.175 }}
+          id='about'
+          
+          
       >
-          <Heading>about me</Heading>
+          <SectionHeading>about me</SectionHeading>
           <p className="mb-3">
           After graduating with a Computer Science degree,
           I initially worked as a <span className="font-medium">Network Engineer</span> abroad, though my true passion was in software development.
