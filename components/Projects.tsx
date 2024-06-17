@@ -13,7 +13,7 @@ export default function Projects() {
   const { ref } = useSectionInview('Projects', 0.5);
 
   return (
-    <section ref={ref} id='projects' className='scroll-mt-28'>
+    <section ref={ref} id='projects' className='scroll-mt-28 mb-28'>
       <SectionsHeading>My projects</SectionsHeading>
       <div>
         {

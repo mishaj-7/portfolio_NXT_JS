@@ -51,3 +51,20 @@ export const projectsData = [
         imageUrl: todoImg
     },
 ] as const; // this implicitly read only properties
+
+export const skillsData = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'Node.js',
+    'Git',
+    'Tailwind-css',
+    'MongoDB',
+    'Redux',
+    'Redux-toolkit',
+    'Express',
+    'Framer Motion',
+] as const;
