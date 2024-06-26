@@ -19,5 +19,6 @@ export function useSectionInview(sectionName:SectionName, threshold = 0.75) {
     
     return {
         ref,
+        
     }
 }

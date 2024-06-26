@@ -7,9 +7,14 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInview } from '@/lib/hook';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Hero() {
   const { ref } = useSectionInview('Home', 0.5); // header section link selection animatin works using this custom hook
+  const {
+    setActiveSection,
+    setTimeOfLastClick,
+  } = useActiveSectionContext();
 
   return (
     <section ref={ref} id='home' className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
@@ -66,29 +71,34 @@ export default function Hero() {
           delay: 0.1,
         }}
       >
-        <Link href='#contact' className='group bg-gray-900 text-white px-7 flex rounded-full py-3 items-center gap-2 outline-none focus:scale-110  hover:scale-110 hover:bg-gray-950 active:scale-105 transition'> Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' /> </Link>
+        <Link href='#contact' className='group bg-gray-900 text-white px-7 flex rounded-full py-3 items-center gap-2 outline-none focus:scale-110  hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+        onClick={() => {
+          setActiveSection('Contact');
+          setTimeOfLastClick(Date.now());
+        }}
+        > Connect me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' /> </Link>
 
         <a className='group bg-white  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110
-        active:scale-105 transition cursor-pointer border border-black/10'
+        active:scale-105 transition cursor-pointer borderBlack'
           href='/CV.pdf'
           download={true}
         > Download CV<HiDownload className='opacity-60 group-hover:' /> </a>
 
-        <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950'
+        <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack hover:text-gray-950'
           href='https://www.linkedin.com/in/mishaj-k-b195aa195/ '
           target='_blank'
         >
           <BsLinkedin />
         </a>
 
-        <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15 hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10'
+        <a className='bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-110 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack'
           href='https://github.com/mishaj-7'
           target='_blank'
         >
           <FaGithubSquare />
         </a>
 
-      </motion.div>
+      </motion.div> 
     </section>
   )
 }
