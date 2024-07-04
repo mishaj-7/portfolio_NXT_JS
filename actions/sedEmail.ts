@@ -26,7 +26,7 @@ if(!validateString(message, 5000)) {
 let data;
 try {
     data = await resend.emails.send({
-    from:'portfolio <onboarding@resend.df>',
+    from:'portfolio <onboarding@resend.dev>',
     to:'amstig100@gmail.com',
     subject:'Message from portfolio',
     reply_to: senderEmail as string,

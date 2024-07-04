@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Mohamed Mishaj | Experienced Full-Stack Developer",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
         {children}
+        <Footer />
         <Toaster position="top-right" />
         </ActiveSectionContextProvider> 
         
