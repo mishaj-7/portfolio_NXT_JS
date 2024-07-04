@@ -3,13 +3,16 @@
 
 import React from 'react'
 import SectionsHeading from './SectionsHeading';
-import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useSectionInview } from '@/lib/hook';
 import { sendEmail } from '@/actions/sedEmail';
+import { BiMailSend, BiPhone } from 'react-icons/bi';
+import SubmitBtn from './Submit-btn';
+import toast from 'react-hot-toast'
+
 export default function Contact() {
     const {ref} = useSectionInview('Contact');
-
+    
 
   return (
     <motion.section id='contact'
@@ -31,12 +34,29 @@ export default function Contact() {
 
     >
       <SectionsHeading>Contact me</SectionsHeading>
-          <p className='text-gray-700 -mt-4'>Connect me through <a className='underline' href="mailto:amstig100@gmail.com">amstig100@gmail.com</a>{" "}
-              or this form.
-          </p>
+          
+          <div className='text-gray-700 -mt-4 flex flex-col justify-center items-center'>
+              connect me directly
+              <div className='flex flex-row gap-2 mt-3 mb-3'>
+                  <a 
+                   href="tel:+919645865551" className='px-7 flex rounded-full py-2 items-center gap-3 border hover:bg-black hover:bg-opacity-10 '>
+                      <BiPhone />
+                  </a>
+                  <a className='px-7 flex rounded-full py-3 items-center gap-2 border hover:bg-black hover:bg-opacity-10' href="mailto:amstig100@gmail.com">
+                      <BiMailSend />
+                  </a>
+              </div>
+              or send a message.
+          </div>
+
           <form className='mt-10 flex flex-col'
            action={ async (FormData) => {
-            await sendEmail(FormData);
+               const { data, error } =  await sendEmail(FormData);
+            if(error) {
+                toast.error(error)
+                return;
+            }
+            toast.success('message sent successfully!')
            }}
            >
               <input type="email" 
@@ -52,11 +72,9 @@ export default function Contact() {
               required 
               maxLength={5000}
               />
-              <button type='submit' 
-              className='group flex items-center justify-center gap-2  h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950
-        active:scale-105'> Send <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1' />{" "}
-              </button>
+              <SubmitBtn />
           </form>
     </motion.section>
   )
+    
 }
