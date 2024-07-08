@@ -35,7 +35,7 @@ export default function Contact() {
     >
       <SectionsHeading>Contact me</SectionsHeading>
           
-          <div className='text-gray-700 -mt-4 flex flex-col justify-center items-center'>
+          <div className='text-gray-700 -mt-4 flex flex-col justify-center items-center dark:text-white/80'>
               connect me directly
               <div className='flex flex-row gap-2 mt-3 mb-3'>
                   <a 
@@ -49,7 +49,7 @@ export default function Contact() {
               or send a message.
           </div>
 
-          <form className='mt-10 flex flex-col'
+          <form className='mt-10 flex flex-col dark:text-black'
            action={ async (FormData) => {
                const { data, error } =  await sendEmail(FormData);
             if(error) {
@@ -63,10 +63,10 @@ export default function Contact() {
               required
               name='senderEmail' 
               maxLength={500} 
-              className='h-14 px-4 rounded-lg borderBlack' 
+              className='h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none' 
               placeholder='your email'
               />
-              <textarea className='h-52 my-3 rounded-lg borderBlack p-4' 
+              <textarea className='h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none' 
               placeholder='Your message' 
               name='message'
               required 
