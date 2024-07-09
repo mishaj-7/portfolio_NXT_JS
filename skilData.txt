@@ -69,7 +69,6 @@ export const skillsData = [
   "TypeScript",
   "Aws",
   "linux/unix",
-
   "Next.js",
   "CSS",
   "Git",
@@ -84,24 +83,24 @@ export const experiencesData = [
     title: "Graduated RVS collage",
     location: "coimbatore",
     description:
-      "I graduated after 3 years of studying. I immediately found a job as a front-end developer like freelancer.",
+      "After graduating with a BSc in Computer Science, I immediately began working as a freelance front-end developer",
     icon: React.createElement(LuGraduationCap),
-    date: "2020",
+    date: "2019",
   },
   {
     title: "Front-End Developer",
     location: "kerala",
-    description:
-      "I worked as a front-end developer while working full-time job as part time. I also upskilled to the full stack.",
+    description: `While working full-time as a network engineer, I took on part-time work as a front-end developer
+      I also upskilled to full-stack development through online learning`,
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2020 - 2022",
   },
   {
     title: "Full-Stack Developer MERN",
     location: "kochi",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Node js, TypeScript, Tailwind,  and MongoDB. I'm open to full-time opportunities.",
+      "I am currently working as a full-stack developer intern at Mentrow, where I specialize in React, Node.js, Express, MongoDB, and more. I am actively seeking full-time opportunities",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023 - present",
   },
 ] as const;

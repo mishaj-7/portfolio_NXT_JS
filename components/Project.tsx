@@ -7,11 +7,14 @@ import { projectsData } from '@/lib/data'
 
 
 
+
 type ProjectProps = (typeof projectsData)[number] //indexed access type" in TypeScript [number] index signature in this conrtext it indexed access type
 export default function Project({title,
   description,
   tags,
-  imageUrl, }: ProjectProps) {
+  imageUrl,
+  appUrl,
+}: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null); // if the type didnt say to useref if infer other unwanted type which cause undesirable ouput we need to take the sections type 
  const {scrollYProgress} = useScroll({
     target: ref,
@@ -43,14 +46,18 @@ export default function Project({title,
               {tag}</li>
           ))}
         </ul>
+            
       </div>
 
-      <Image src={imageUrl} alt='My projects' quality={50} className='absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 
       
+      
+      <a href={appUrl} >
+       <Image src={imageUrl} alt='My projects' quality={50} className='absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 
       group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 
       group-even:group-hover:rotate-2
-      
       group-even:right-[initial] group-even:-left-40' />
+      </a>
+      
     </section>  
     </motion.div>
   );
