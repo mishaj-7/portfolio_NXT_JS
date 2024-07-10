@@ -6,9 +6,10 @@ import SectionsHeading from './SectionsHeading';
 import { motion } from 'framer-motion';
 import { useSectionInview } from '@/lib/hook';
 import { sendEmail } from '@/actions/sedEmail';
-import { BiMailSend, BiPhone } from 'react-icons/bi';
+import { BiLogoGmail, BiPhone } from 'react-icons/bi';
 import SubmitBtn from './Submit-btn';
 import toast from 'react-hot-toast'
+import { BsWhatsapp } from 'react-icons/bs';
 
 export default function Contact() {
     const {ref} = useSectionInview('Contact');
@@ -34,16 +35,17 @@ export default function Contact() {
     >
       <SectionsHeading>Contact me</SectionsHeading>
           
-          <div className='text-gray-700 -mt-4 flex flex-col justify-center items-center dark:text-white/80'>
+          <div className='text-gray-700 -mt-2 flex flex-col justify-center items-center dark:text-white/80'>
               connect me directly
-              <div className='flex flex-row gap-2 mt-3 mb-3'>
+              <div className='flex flex-row gap-2 mt-4 mb-5'>
                   <a 
-                   href="tel:+919645865551" className='px-7 flex rounded-full py-2 items-center gap-3 border hover:bg-black hover:bg-opacity-10 '>
+                   href="tel:+919645865551" className='px-7 flex rounded-full py-2 items-center gap-3 border hover:bg-black hover:bg-opacity-10 dark:hover: ' target='_blank'>
                       <BiPhone />
                   </a>
-                  <a className='px-7 flex rounded-full py-3 items-center gap-2 border hover:bg-black hover:bg-opacity-10' href="mailto:amstig100@gmail.com">
-                      <BiMailSend />
+                  <a className='px-7 flex rounded-full py-3 items-center gap-2 border hover:bg-black hover:bg-opacity-10' href="mailto:amstig100@gmail.com" target='_blank'>
+                      <BiLogoGmail />
                   </a>
+                  <a href="https://wa.me/+919645865551" className='px-7 flex rounded-full py-3 items-center gap-2 border hover:bg-black hover:bg-opacity-10' target='_blank'><BsWhatsapp /></a>
               </div>
               or send a message.
           </div>

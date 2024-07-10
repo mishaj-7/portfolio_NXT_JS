@@ -4,6 +4,7 @@ import React, { useRef } from 'react'
 import Image from 'next/image';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { projectsData } from '@/lib/data'
+import Link from 'next/link';
 
 
 
@@ -51,12 +52,12 @@ export default function Project({title,
 
       
       
-      <a href={appUrl} >
+      <Link href={appUrl}  target='_blank'>
        <Image src={imageUrl} alt='My projects' quality={50} className='absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 
       group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 
       group-even:group-hover:rotate-2
       group-even:right-[initial] group-even:-left-40' />
-      </a>
+      </Link>
       
     </section>  
     </motion.div>

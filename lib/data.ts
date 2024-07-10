@@ -37,24 +37,24 @@ export const projectsData = [
   {
     title: "Authentication-app",
     description:
-      "0s, when an unknown printer took a gallecimen book. It has survived not only five centuries, but alsessentially un",
-    tags: ["Ract", "express", "NodeJs", "mongoDB", "tailwind", "redux_toolkit"],
+      "A full-stack authentication application built with React, Express, Node.js, MongoDB, and Tailwind CSS. Implements Redux Toolkit for state management.",
+    tags: ["Ract", "Express", "Node Js", "mongoDB", "tailwind CSS", "redux_toolkit", "jwt"],
     imageUrl: authAppImg,
     appUrl: "https://auth-app-wuly.onrender.com/",
   },
   {
     title: "Nike",
     description:
-      "f letters, as opposed to using Cont here, making it look like readable E and web page editopsum as their default",
-    tags: ["React", "react-dom", "tailwindcss", "hooks", "haid", "da9d"],
+      "A responsive landing page inspired by Nike's design language. Built using React, Tailwind CSS, and custom hooks.",
+    tags: ["React", "react-dom", "tailwindcss", "custom-hooks", "eslint",],
     imageUrl: nikeImg,
     appUrl: "https://nike-teal-three.vercel.app/",
   },
   {
     title: "todo",
     description:
-      "Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the und",
-    tags: ["typeScript", "typeSafetey", "crud", "hooks"],
+      "A TypeScript-based CRUD application for managing tasks. Uses React with hooks for front-end development and ensures type safety throughout.",
+    tags: ["typeScript", "TypeSafetey",'react-hooks', 'class component'],
     imageUrl: todoImg,
     appUrl: "https://type-script-todo-eta.vercel.app/",
   },
