@@ -69,7 +69,6 @@ export const skillsData = [
   "TypeScript",
   "Aws",
   "linux/unix",
-
   "Next.js",
   "CSS",
   "Git",
@@ -97,7 +96,7 @@ export const experiencesData = [
     date: "2019 - 2021",
   },
   {
-    title: "Full-Stack Developer MERN",
+    title: "Mern stack intern at mentrow",
     location: "kochi",
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Node js, TypeScript, Tailwind,  and MongoDB. I'm open to full-time opportunities.",
