@@ -92,7 +92,7 @@ export default function Hero() {
         <span className="font-bold">Hello, I'm Mohamed Mishaj k.</span> I'm a{" "}
         <span className="font-bold">full-stack developer</span> with{" "}
         <span
-          className="font-semibold inline-block font-mono"
+          className="font-thin underline inline-block font-mono"
           // style={{ minWidth: "11ch", textAlign: "left" }}
         >
           {experience.toFixed(9)}
